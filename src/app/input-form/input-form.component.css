@@ -1,0 +1,71 @@
+.header-form {
+    display: flex;
+    align-items: center;
+    padding-right: 12px;
+}
+
+.text-input {
+    margin-right: 30px;
+    border-radius: 7px;
+    width: 300px;
+    height: 30px;
+}
+
+button {
+    background-color: #878787;
+    border: solid transparent;
+    border-radius: 32px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: din-round,sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 10px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 40%;
+  }
+  
+  button:after {
+    background-clip: padding-box;
+    background-color: #f1f1f1;
+    border: solid transparent;
+    border-radius: 32px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+  
+  button:main,
+  button:focus {
+    user-select: auto;
+  }
+  
+  button:hover:not(:disabled) {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+  }
+  
+  button:disabled {
+    cursor: auto;
+  }

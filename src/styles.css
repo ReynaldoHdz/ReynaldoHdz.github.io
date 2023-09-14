@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Set height of the HTML and body elements to 100% */
+html, body {
+    height: 100%;
+    margin: 0; /* Remove default margins to avoid unwanted spacing */
+    padding: 0; /* Remove default padding */
+    overflow: hidden; /* Hide any potential scrollbars */
+}
+
+app-root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}

@@ -1,0 +1,7 @@
+<div class="container">
+    <div *ngFor="let color of apiData; let i = index" class="rectangle" [ngStyle]="{ 'background-color': color }">
+      <p class="text white">{{ color }}</p>
+      <p class="text black">{{ color }}</p>
+    </div>
+</div>
+  
