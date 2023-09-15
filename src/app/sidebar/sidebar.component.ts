@@ -18,7 +18,13 @@ export class SidebarComponent {
         next: (data) => {
           // Check if 'data' is an array
           if (Array.isArray(data)) {
-            this.data = data.reverse();
+            this.data = data.sort((obj1,obj2)=>{
+              if(obj1.datetime<obj2.datetime)
+                return 1;
+              if(obj1.datetime>obj2.datetime)
+                return -1
+              return 0;
+            });
           }
         },
         error: error => {

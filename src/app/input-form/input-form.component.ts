@@ -23,10 +23,9 @@ export class InputFormComponent {
         next: (response) => {
           console.log('Text sent successfully');
           console.log('ApiData in InputFormComponent:', response);
-          this.http.post<any>('https://st1-ad23-db.onrender.com/palettes/add', JSON.stringify({prompt: this.textInput, colors: response.colors}), {'headers': { 'Content-Type': 'application/json'}}).subscribe({
+          this.http.post<any>('https://st1-ad23-db.onrender.com/palettes/add', JSON.stringify({prompt: this.textInput, colors: response.colors, datetime: Math.floor(Date.now() / 1000)}), {'headers': { 'Content-Type': 'application/json'}}).subscribe({
             next: (data) => {
               this.dataService.setApiData(response);
-          
             },
             error: error => {
               console.error('Error sending prompt and colors to database: ' + error)
